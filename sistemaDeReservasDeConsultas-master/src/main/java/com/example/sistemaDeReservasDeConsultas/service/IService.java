@@ -3,7 +3,7 @@ package com.example.sistemaDeReservasDeConsultas.service;
 import java.util.List;
 import java.util.Optional;
 
-public interface IPacienteService <T> {
+public interface IService <T> {
 
     public List<T> getAll();
     public Optional<T> getById(Long id);

@@ -1,17 +1,24 @@
 package com.example.sistemaDeReservasDeConsultas.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import javax.persistence.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@NoArgsConstructor @Data
+@Entity @Table(name = "dentistas")
 public class Dentista {
-    private int id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nome;
     private String sobrenome;
     private String matriculaCadastro;
+
+    @OneToMany(mappedBy = "dentista", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private List<Consulta> consultas = new ArrayList<>();
 }

@@ -1,21 +1,32 @@
 package com.example.sistemaDeReservasDeConsultas.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor @Data
+@Entity @Table(name = "pacientes")
 public class Paciente {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nome;
     private String sobrenome;
-    private String endereco;
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "endereco_id")
+    private Endereco endereco;
     private String rg;
     private Date dataDeAlta;
+
+    @OneToMany(mappedBy = "paciente", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private List<Consulta> consultas = new ArrayList<>();
+    
 }
