@@ -1,4 +1,6 @@
 package com.example.sistemaDeReservasDeConsultas.controller;
+import com.example.sistemaDeReservasDeConsultas.exceptions.BadRequestException;
+import com.example.sistemaDeReservasDeConsultas.exceptions.RessourceNotFoundException;
 import com.example.sistemaDeReservasDeConsultas.model.Paciente;
 import com.example.sistemaDeReservasDeConsultas.service.PacienteServiceImpl;
 
@@ -16,7 +18,7 @@ public class PacienteController {
     public PacienteController(PacienteServiceImpl service) { this.service = service; }
 
     @PostMapping
-    public Paciente cadastrarPaciente(@RequestBody Paciente paciente) {
+    public Paciente cadastrarPaciente(@RequestBody Paciente paciente) throws BadRequestException {
         return service.add(paciente);
     }
 
@@ -26,17 +28,29 @@ public class PacienteController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Paciente> buscaPacienteId(@PathVariable Long id) {
+    public Optional<Paciente> buscaPacienteId(@PathVariable Long id) throws RessourceNotFoundException {
+        try{
         return service.getById(id);
-    }
-
+    }catch
+            (Exception e){
+                throw new RessourceNotFoundException("Não foi encontrado um paciente com ID: " +id);
+            }
+        }
     @PutMapping("/atualizar")
-    public void alterarPaciente(@RequestBody Paciente paciente) {
-        service.update(paciente);
+    public void alterarPaciente(@RequestBody Paciente paciente) throws RessourceNotFoundException {
+        try {
+            service.update(paciente);
+        } catch (Exception e) {
+            throw new RessourceNotFoundException("Não foi alterar o paciente: " + paciente);
+        }
     }
 
     @DeleteMapping("/{id}")
-    public void excluirPaciente(@PathVariable Long id) {
+    public void excluirPaciente(@PathVariable Long id) throws RessourceNotFoundException {
+        try {
         service.remove(id);
-    }
+    }catch (Exception e){
+            throw new RessourceNotFoundException("Não foi possível excluir o paciente ID:" +id);
+        }
+}
 }
