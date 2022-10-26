@@ -1,0 +1,35 @@
+body {
+  background: #FAFAFA;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.image {
+  width: 250px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+li {
+  text-align: center;
+  list-style: none;
+  background: #D3D3D3;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #555;
+}
