@@ -1,7 +1,6 @@
-import { Component } from "react";
+function FormColor(props){
 
-export class FormColor extends Component { 
-render(){ return(
+return(
   <div className="container">
 <div className="containerForm">
 <form>
@@ -21,4 +20,6 @@ render(){ return(
   </div>
   </div>
   )
-}}
+}
+
+export default FormColor;
