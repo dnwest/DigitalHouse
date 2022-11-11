@@ -1,4 +1,4 @@
-export function averageNotes(nota){
+export function averageNotes(notas){
 
   if(notas.length <1){
     return 0;

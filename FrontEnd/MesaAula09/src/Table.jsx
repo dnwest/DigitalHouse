@@ -33,4 +33,4 @@ const Table = ({notas})=>{
 </div>
 }
 
-export default Tables;
+export default Table;
