@@ -45,8 +45,16 @@ input {
 }
 
 input:focus{
-  border: 2px solid #36CE7C;
+  border: 1px solid #36CE7C;
   transition: 0.509s;
+}
+
+.inputError{
+  border: 1px solid #FF7070;
+}
+
+.inputError:focus{
+  border: 1px solid #FF7070;
 }
 
 label {
@@ -89,9 +97,28 @@ button {
   margin-bottom: 32px;
 }
 
+.containerFormError {
+  margin-top: 84px;
+  width: 75rem;
+  height: 309px;
+  top: 84px;
+  background: #221515;
+  border: 1px solid #FF7070;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
 .flexButton {
   width: 100%;
   display: grid;
   justify-content: flex-end;
   padding: 8px;
+}
+
+.error {
+  color: #FF7070;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: -25px;
 }

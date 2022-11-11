@@ -1,11 +1,12 @@
-import { Component } from "react";
+function Card (props){
 
-export class Card extends Component { 
-render(){ return(
+return(
     
-  <div className="containerColor">
-    <span className="nameColor">Nome</span>
-    <p className="colorCode">#5883F0</p>
+  <div className="containerColor" style={{backgroundColor:`${props.card.color}`}}>
+    <span className="nameColor">{props.card.name}</span>
+    <p className="colorCode">{props.card.color}</p>
   </div>
   )
-}}
+}
+
+export default Card;
