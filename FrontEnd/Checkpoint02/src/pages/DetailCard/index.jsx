@@ -1,10 +1,9 @@
 import { useState, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ScheduleFormModal from "../Components/ScheduleFormModal";
-import api from "../api/api";
+import ScheduleFormModal from "../../Components/ScheduleFormModal";
+import api from "../../services/api";
 import styles from "./DetailCard.module.css";
-import { NavBarContext } from "../Components/contexts/NavBarContext";
-import { ToastContainer, toast } from "react-toastify";
+import { NavBarContext } from "../../Components/NavBarContext";
 
 const DetailCard = () => {
   const { contextIsLight } = useContext(NavBarContext);
@@ -21,7 +20,7 @@ const DetailCard = () => {
 
       usuario.push(dentista.usuario);
     } catch (error) {
-      toast.error("Error" + error);
+      alert.error("Error" + error);
     }
   }
 
@@ -32,7 +31,6 @@ const DetailCard = () => {
   let name = "";
 
   for (const key in dentista) {
-    // Pegando o username, dentro do objeto dentista.
     name = dentista[key].username;
   }
   return (
@@ -76,7 +74,6 @@ const DetailCard = () => {
         </div>
       </section>
       <ScheduleFormModal />
-      <ToastContainer />
     </>
   );
 };

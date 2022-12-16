@@ -2,9 +2,8 @@ import { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Components/AuthContext";
-import api from "../api/api";
-import { NavBarContext } from "../contexts/NavBarContext";
-
+import api from "../services/api";
+import { NavBarContext } from "../Components/NavBarContext";
 import styles from "./Form.module.css";
 
 const LoginForm = () => {

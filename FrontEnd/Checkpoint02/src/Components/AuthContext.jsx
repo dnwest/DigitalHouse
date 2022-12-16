@@ -1,7 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { toast } from "react-toastify";
-
 import api from "../services/api";
 
 export const AuthContext = createContext({});
@@ -18,7 +16,7 @@ const AuthProvider = ({ children }) => {
       const response = await api.get("/consulta");
       setConsulta(response.data);
     } catch (error) {
-      toast.error("Error: " + error);
+      alert.error("Error: " + error);
     }
   }
 
@@ -27,7 +25,7 @@ const AuthProvider = ({ children }) => {
       const response = await api.get("/dentista");
       setDentista(response.data);
     } catch (error) {
-      toast.error("Error" + error);
+      alert.error("Error" + error);
     }
   }
 
@@ -36,7 +34,7 @@ const AuthProvider = ({ children }) => {
       const response = await api.get("/paciente");
       setPaciente(response.data.body);
     } catch (error) {
-      toast.error("Error" + error);
+      alert.error("Error" + error);
     }
   }
 

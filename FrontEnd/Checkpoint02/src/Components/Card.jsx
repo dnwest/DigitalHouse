@@ -1,6 +1,6 @@
 import styles from "./Card.module.css";
 import { useContext } from "react";
-import { NavBarContext } from "../contexts/NavBarContext";
+import { NavBarContext } from "../Components/NavBarContext";
 
 const Card = ({ nome, sobrenome }) => {
   const { contextIsLight } = useContext(NavBarContext);
