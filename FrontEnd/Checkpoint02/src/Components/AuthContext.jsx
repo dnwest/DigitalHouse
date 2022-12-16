@@ -65,14 +65,12 @@ const AuthProvider = ({ children }) => {
       fillUsetDataState({
         token: user.token,
       });
-      //console.log(user);
       getDentista();
       getPaciente();
       getConsulta();
       setIsLogado(true);
       navigate(location?.pathname);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
