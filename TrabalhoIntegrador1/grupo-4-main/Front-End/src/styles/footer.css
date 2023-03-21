@@ -1,0 +1,81 @@
+.footer {
+  background: #0a100d;
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+ 
+}
+
+.footer_logo i {
+  color: #d6d5c9;
+  font-weight: 100;
+}
+
+.footer_logo span {
+  color: #d6d5c9;
+  font-weight: 500;
+}
+
+.footer_logo-content {
+  color: #d6d5c9d8;
+  margin-top: 15px;
+  line-height: 30px;
+}
+
+.quick__link {
+  border: none !important;
+  background: transparent !important;
+}
+
+.quick__link a {
+  color: #d6d5c9d8;
+  text-decoration: none;
+  font-weight: 100;
+  transition: 0.3;
+}
+
+.quick__link a:hover {
+  color: #2c261f;
+}
+
+.footer_link-title {
+  color: #d6d5c9d8;
+}
+
+.office_info {
+  color: #d6d5c9d8;
+  font-weight: 300;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 4px;
+  border: solid 1px #b9baa3c3;
+  border-radius: 50px;
+  background: #2c261f;
+}
+
+.newsletter input {
+  background: transparent;
+  color: #d6d5c9;
+  border: none;
+  outline: none;
+}
+
+.newsletter input::placeholder {
+  font-size: 0.8rem;
+  color: #d6d5c9;
+}
+
+.newsletter span i {
+  color: #d6d5c9;
+}
+
+.footer_bottom {
+  border-top: solid 1px #b9baa3;
+}
