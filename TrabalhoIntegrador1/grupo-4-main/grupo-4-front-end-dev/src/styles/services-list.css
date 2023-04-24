@@ -1,0 +1,17 @@
+.service_item_icon {
+  font-size: 2.5rem;
+  color: #554d43;
+}
+
+.service_item h6 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.service_item h6:hover {
+  color: #27221c !important;
+}
+
+.service_item_icon:hover {
+  color: #27221c;
+}

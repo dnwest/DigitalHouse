@@ -1,0 +1,160 @@
+.img_produto {
+  width: 100%;
+  height: 200%;
+  border-radius: 10px;
+}
+
+btn-car {
+  display: flex;
+}
+
+.car_item {
+  border: solid 1px #7c8a9736;
+  box-shadow: 5px 5px 15px -5px #7c8a97;
+  padding: 20px;
+  border-radius: 5px;
+  height: 100%;
+  width: 430px;
+}
+
+.car_item-info span i {
+  color: #554d43;
+  font-size: 1.1rem;
+  background-color: red;
+}
+
+.car_item-btn {
+  border-radius: 0;
+  border: none;
+  outline: none;
+  background: #554d43;
+  padding: 8px 0;
+  margin-bottom: 10px;
+}
+
+.car_item-btn a {
+  text-decoration: none;
+  color: #2c261f;
+  font-weight: 500;
+  margin-bottom: 10px 10px 20px;
+}
+
+.car_item-btn a:hover {
+  color: #ffffff;
+}
+
+.car_btn-details {
+  background: #c4bdb3;
+  border-radius: 0px 4px 4px 0px;
+  margin-bottom: 10px 10px 20px;
+}
+
+.car_btn-rent {
+  border-radius: 4px 0px 0px 4px;
+  margin-bottom: 10px 10px 20px;
+}
+
+.car_item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.car_item-content h4 {
+  font-size: 1.8rem;
+}
+
+.car_item-content h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.car_item-content button {
+  margin-bottom: 10px;
+}
+
+.card-container {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  margin-bottom: 60px;
+  border: solid 1px #7c8a9736;
+  box-shadow: 5px 5px 15px -5px #7c8a97;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.img-card {
+  width: 100%;
+  height: 33vh;
+  border-radius: 10px;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 150px;
+  margin-bottom: 60px;
+}
+
+.car-name {
+  font-size: 20px;
+  color: #554d43;
+  text-align: center;
+  font-weight: 600;
+}
+
+.card-price {
+  font-weight: 600;
+  color: #554d43;
+}
+
+@media only screen and (max-width: 992px) {
+  .car_item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  .car_item h6 {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .car_item-info {
+    flex-wrap: wrap;
+  }
+
+  .car_item-info span {
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .car_item-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ca_item h4 {
+    font-size: 1rem;
+  }
+
+  .car_item h6 {
+    font-size: 0.9rem;
+  }
+
+  .car_item-info span {
+    font-size: 0.7rem;
+  }
+
+  .car_item-info span i {
+    font-size: 0.9rem;
+  }
+
+  .car_item-btn {
+    font-size: 0.8rem;
+  }
+}
